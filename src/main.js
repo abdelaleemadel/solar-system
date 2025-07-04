@@ -84,15 +84,13 @@ window.addEventListener("resize", () => {
 
 //Stars Texture
 const textureLoader = new THREE.CubeTextureLoader();
-const textureUrl = new URL("./../textures/stars.png", import.meta.url);
-
 const starTexture = textureLoader.load([
-  textureUrl.href,
-  textureUrl.href,
-  textureUrl.href,
-  textureUrl.href,
-  textureUrl.href,
-  textureUrl.href,
+  "/stars.webp",
+  "/stars.webp",
+  "/stars.webp",
+  "/stars.webp",
+  "/stars.webp",
+  "/stars.webp",
 ]);
 
 scene.background = starTexture;
@@ -116,7 +114,7 @@ function animate() {
   raycaster.setFromCamera(mouse, camera);
   const intersects = raycaster.intersectObjects(planetsMesh);
 
-  if (intersects.length > 0) {
+  if (intersects.length > 0 && window.innerWidth < 768) {
     const planetMesh = intersects[0].object;
     const planet = planets.find((p) => p.mesh === planetMesh);
 
