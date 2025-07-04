@@ -9,14 +9,14 @@ canvas {
 
 #controls {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0, 0, 0, 0.7);
+  top: 1%;
+  left: 1%;
+  background: rgba(0, 0, 0, 0.4);
   padding: 12px;
   border-radius: 8px;
   color: white;
   font-family: sans-serif;
-  max-height: 90vh;
+  max-height: 40vh;
   overflow-y: auto;
   z-index: 1;
 }
@@ -24,13 +24,13 @@ canvas {
 #controls label {
   display: block;
   margin-bottom: 4px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #controls input[type="range"] {
   width: 120px;
   margin-left: 0;
-  margin-bottom: 12px;
+  margin-bottom: 1%;
 }
 
 #pauseBtn {
