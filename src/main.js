@@ -115,7 +115,7 @@ function animate() {
   raycaster.setFromCamera(mouse, camera);
   const intersects = raycaster.intersectObjects(planetsMesh);
 
-  if (intersects.length > 0 && window.innerWidth < 768) {
+  if (intersects.length > 0) {
     const planetMesh = intersects[0].object;
     const planet = planets.find((p) => p.mesh === planetMesh);
 
