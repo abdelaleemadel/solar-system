@@ -84,13 +84,15 @@ window.addEventListener("resize", () => {
 
 //Stars Texture
 const textureLoader = new THREE.CubeTextureLoader();
+const textureUrl = new URL("./../textures/stars.png", import.meta.url);
+
 const starTexture = textureLoader.load([
-  "textures/stars.png",
-  "textures/stars.png",
-  "textures/stars.png",
-  "textures/stars.png",
-  "textures/stars.png",
-  "textures/stars.png",
+  textureUrl.href,
+  textureUrl.href,
+  textureUrl.href,
+  textureUrl.href,
+  textureUrl.href,
+  textureUrl.href,
 ]);
 
 scene.background = starTexture;
